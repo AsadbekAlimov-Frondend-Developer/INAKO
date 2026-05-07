@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ИНАКО</title>
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- header start -->
+    <div class="container">
+      <header class="header">
+        <div class="logo-btn">
+          <img src="assets/imgs/logo.png" alt="ИНАКО">
+        </div>
+
+        <div class="nav-links">
+          <a href="#">Условный пункт меню</a>
+          <a href="#">Условный пункт</a>
+          <a href="#">Условный пункт</a>
+          <a href="#">Условный пункт</a>
+          <a href="#">Условный пункт</a>
+        </div>
+
+        <button class="menu-btn" data-bs-toggle="modal" data-bs-target="#burgerModal">
+          <img src="assets/imgs/menu-icon.png" alt="Menu" width="20">
+        </button>
+      </header>
+    </div>
+    <!-- Main Section -->
+    <section class="hero-section">
+      <div class="container">
+
+        <div class="heroMainBlock">
+          <!-- Left text area -->
+          <div class="heroContetsBlock">
+            <div class="content">
+              <h1 class="hero-title">Мы берем под <br> контроль рост <br> <span>дохода клиники</span></h1>
+              <p class="hero-subtitle hero-subtitle2"><span>Не маркетинг.</span> Система, которая находит и закрывает
+                точки потери денег в маркетинге, записи и работе с пациентами</p>
+            </div>
+            <div class="btn-sub-title">
+              <span>Вы платите только с роста.</span>
+              Если выручка не растет — мы не зарабатываем.
+            </div>
+            <button class="primary-btn" data-bs-toggle="modal" data-bs-target="#formModal">
+              <img src="assets/imgs/file-document.png" alt="Doc">
+              <div class="primary-btn-text">
+                <strong>Получить аудит</strong>
+                <small>Покажем, где вы теряете пациентов</small>
+              </div>
+            </button>
+          </div>
+
+          <!-- Right calculator area -->
+          <div class="calculatorBlock ">
+            <div class="calc-card">
+              <h2 class="calc-title">Посчитайте, <span>сколько вы теряете</span> из-за отзывов</h2>
+              <form id="revenueCalcForm">
+                <div class="calcForm_blocks">
+                  <div class="calcForm_block">
+                    <label for="leads" class="input-title">Первичные обращения в месяц</label>
+                    <div class="input-group-custom">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <path
+                          d="M17.5833 20.625C17.5833 18.8991 15.2515 17.5 12.375 17.5C9.49852 17.5 7.16667 18.8991 7.16667 20.625M21.75 17.5004C21.75 16.219 20.4645 15.1177 18.625 14.6354M3 17.5004C3 16.219 4.28552 15.1177 6.125 14.6354M18.625 10.4543C19.2643 9.8821 19.6667 9.05055 19.6667 8.12503C19.6667 6.39914 18.2676 5.00003 16.5417 5.00003C15.7413 5.00003 15.0112 5.30092 14.4583 5.79575M6.125 10.4543C5.48568 9.8821 5.08333 9.05055 5.08333 8.12503C5.08333 6.39914 6.48244 5.00003 8.20833 5.00003C9.0087 5.00003 9.7388 5.30092 10.2917 5.79575M12.375 14.375C10.6491 14.375 9.25 12.9759 9.25 11.25C9.25 9.52414 10.6491 8.12503 12.375 8.12503C14.1009 8.12503 15.5 9.52414 15.5 11.25C15.5 12.9759 14.1009 14.375 12.375 14.375Z"
+                          stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <input type="number" id="leads" name="leads" placeholder="Введите количество" required>
+                      <span class="value-placeholder">0</span>
+                    </div>
+                  </div>
+                  <div class="calcForm_block">
+                    <label for="averageCheck" class="input-title">Средний чек, ₽</label>
+                    <div class="input-group-custom">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <path
+                          d="M10 10H13M4 4H22M10 14H13M16 10H16.5M16 14H16.5M6 4H20V19.9656C20 20.7959 19.0466 21.2645 18.3892 20.7574L17.0584 19.7307C16.7236 19.4725 16.2625 19.4527 15.9068 19.6813L14.0815 20.8547C13.4227 21.2783 12.5773 21.2783 11.9185 20.8547L10.0932 19.6813C9.73751 19.4527 9.27644 19.4725 8.94164 19.7307L7.6108 20.7574C6.95338 21.2645 6 20.7959 6 19.9656V4Z"
+                          stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg> <input type="number" id="averageCheck" name="averageCheck" placeholder="Введите" required>
+                      <span class="value-placeholder">0</span>
+                    </div>
+                  </div>
+
+                  <div class="calcForm_block">
+                    <label for="conversion" class="input-title">Примерная конверсия в запись, %</label>
+                    <div class="input-group-custom">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <path
+                          d="M10 10H13M4 4H22M10 14H13M16 10H16.5M16 14H16.5M6 4H20V19.9656C20 20.7959 19.0466 21.2645 18.3892 20.7574L17.0584 19.7307C16.7236 19.4725 16.2625 19.4527 15.9068 19.6813L14.0815 20.8547C13.4227 21.2783 12.5773 21.2783 11.9185 20.8547L10.0932 19.6813C9.73751 19.4527 9.27644 19.4725 8.94164 19.7307L7.6108 20.7574C6.95338 21.2645 6 20.7959 6 19.9656V4Z"
+                          stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg> <input type="number" id="conversion" name="conversion" placeholder="Если не знаете — 40%"
+                        required>
+                      <span class="value-placeholder">40</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <button type="submit" class="calc-submit">
+                  <img src="assets/imgs/calculator.png" alt="Calc">
+                  <div class="calc-submit-text">
+                    <strong>Рассчитать упущенную выручку</strong>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Burger Menu Modal -->
+    <div class="modal fade right-panel-modal burger-modal-mobile" id="burgerModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content burger-modal-mobile">
+          <div class="modal-body">
+            <button type="button" class="modal-close-btn" data-bs-dismiss="modal">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#FFF" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <ul class="menu-list">
+              <li><a href="#">Первый экран <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Калькулятор <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Что происходит прямо сейчас? <svg xmlns="http://www.w3.org/2000/svg" width="25"
+                    height="25" viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Как мы решаем проблему? <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Кейсы <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                    fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Цена <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                    fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Ваши риски <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Если ничего не делать <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Бесплатная правда о вас <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+              <li><a href="#">Свяжитесь с нами <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 25" fill="none">
+                    <path
+                      d="M12.375 15.5L15.5 12.375M15.5 12.375L12.375 9.25M15.5 12.375H9.25M21.75 12.375C21.75 17.5527 17.5527 21.75 12.375 21.75C7.19733 21.75 3 17.5527 3 12.375C3 7.19733 7.19733 3 12.375 3C17.5527 3 21.75 7.19733 21.75 12.375Z"
+                      stroke="#BBC1D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Modal (Получить аудит) -->
+    <div class="modal fade right-panel-modal" id="formModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog open-top">
+        <div class="modal-content form-instruction">
+
+          <form class="modal-body d-flex flex-column h-100">
+            <button type="button" class="modal-close-btn d-md-none" data-bs-dismiss="modal">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h3 class="form-title">Заполните форму</h3>
+            <p class="form_description"><span>Без обязательств</span> покажем, где вы теряете деньги <br> и как это
+              исправить</p>
+            <div class="flex-grow-1 form-inputs-wrapper">
+              <!-- Row 1 -->
+              <div class="form-group mb-3">
+                <label for="form_phone" class="input-title">Телефон</label>
+                <input type="tel" id="form_phone" name="phone" class="form-input" placeholder="+7" required>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="form-row d-flex gap-3 mb-3">
+                <div class="form-group flex-fill w-50">
+                  <label for="form_city" class="input-title">Город</label>
+                  <input type="text" id="form_city" name="city" class="form-input" placeholder="Где клиника?" required>
+                </div>
+                <div class="form-group flex-fill w-50">
+                  <label for="form_clinic_name" class="input-title">Название клиники</label>
+                  <input type="text" id="form_clinic_name" name="clinic_name" class="form-input"
+                    placeholder="Подготовимся" required>
+                </div>
+              </div>
+
+              <!-- Row 3 -->
+              <div class="form-group mb-3">
+                <label for="form_name" class="input-title">Ваше имя</label>
+                <input type="text" id="form_name" name="name" class="form-input" placeholder="Хотим обращаться по имени"
+                  required>
+              </div>
+
+              <!-- Row 4 -->
+              <div class="form-row d-flex gap-3 mb-3">
+                <div class="form-group flex-fill w-50">
+                  <label for="form_contact_method" class="input-title">Где вам удобнее?</label>
+                  <input type="text" id="form_contact_method" name="contact_method" class="form-input"
+                    placeholder="Выберите" required>
+                </div>
+                <div class="form-group flex-fill w-50">
+                  <label for="form_datetime" class="input-title">Дата, время</label>
+                  <input type="text" id="form_datetime" name="datetime" class="form-input" placeholder="Выберите"
+                    required>
+                </div>
+              </div>
+            </div>
+            <button class="action-btn form-instruction_btn text-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <g opacity="0.5">
+                  <path
+                    d="M14.8501 18.6L18.6001 14.85M18.6001 14.85L14.8501 11.1M18.6001 14.85H11.1001M26.1001 14.85C26.1001 21.0632 21.0633 26.1 14.8501 26.1C8.63689 26.1 3.6001 21.0632 3.6001 14.85C3.6001 8.63677 8.63689 3.59998 14.8501 3.59998C21.0633 3.59998 26.1001 8.63677 26.1001 14.85Z"
+                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div class="modal fade right-panel-modal" id="resultModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog open-top">
+        <div class="modal-content resultModalContent">
+          <div class="modal-body d-flex flex-column h-100">
+           
+
+            <!-- New Redesigned Result Container -->
+            <div id="newResultContent" class="new-result-container" style="display: none;">
+              <div class="new-result-card">
+                <h3 class="new-result-title">Результат расчета</h3>
+                <div id="result" class="new-result-body">
+                  <div class="result-row" id="row-current">
+                    При текущей конверсии <span id="val-conversion">0</span>% вы получаете:<br>
+                    <span id="val-patients">0</span> пациентов и <span id="val-current-rev">0</span> ₽ выручки.
+                  </div>
+
+                  <div class="result-row special-msg" id="row-special" style="display: none;">
+                    Поздравляем, у вас отличные показатели конверсии, мы не сможем вам помочь!
+                  </div>
+
+                  <div class="result-row" id="row-potential" style="display: none;">
+                    При оптимизации воронки до 60% (средний результат наших партнеров) ваша выручка составит <span
+                      id="val-potential-rev">0</span> ₽.
+                  </div>
+
+                  <div class="result-row highlight" id="row-additional" style="display: none;">
+                    Дополнительно: +<span id="val-additional-rev">0</span> ₽ в месяц.
+                  </div>
+                </div>
+              </div>
+              <div class="new-result-footer">
+                <p class="roadmap-prompt">Хотите дорожную карту, как этого достичь?</p>
+                <button class="primary-btn roadmap-btn" data-bs-toggle="modal" data-bs-target="#formModal"
+                  data-bs-dismiss="modal">
+                  <img src="assets/imgs/file-document.png" alt="Doc">
+                  <span>Получить дорожную карту</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- State: Losses (Negative Reputation) -->
+            <div id="resultLosses" class="resultStatus" style="display: none;">
+              <h3 class="result-title">Вы теряете <br> примерно</h3>
+              <div class="loss-item warning">
+                <div class="result_reytingBlock">
+                  <div class="icon warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <rect width="20" height="20" rx="10" fill="#FFA600" />
+                      <path
+                        d="M13.0336 11.5317L11.5647 13.0007C11.6605 13.0999 11.7751 13.179 11.9019 13.2335C12.0286 13.2879 12.1649 13.3166 12.3029 13.3178C12.4408 13.319 12.5776 13.2927 12.7053 13.2405C12.8329 13.1882 12.9489 13.1111 13.0465 13.0135C13.144 12.916 13.2211 12.8 13.2734 12.6723C13.3256 12.5446 13.3519 12.4078 13.3507 12.2699C13.3495 12.132 13.3208 11.9956 13.2664 11.8689C13.2119 11.7421 13.1328 11.6275 13.0336 11.5317ZM8.42789 14.2977L8.7946 14.6644L14.6646 8.79417L14.2978 8.42744L13.7254 8.50899C13.3338 8.56509 12.8481 8.44562 12.6466 8.24407L10.6287 6.22654C10.043 5.65188 9.25421 5.33168 8.43375 5.33558C7.61329 5.33947 6.82754 5.66714 6.24739 6.24733C5.66723 6.82752 5.33957 7.61331 5.33568 8.43382C5.33179 9.25432 5.65196 10.0432 6.22659 10.6289L8.24453 12.6469C8.44607 12.8485 8.56553 13.3341 8.50944 13.7258L8.42789 14.2977Z"
+                        fill="white" />
+                    </svg>
+                  </div>
+                  <div class="progress-bar warning" id="prog-pt"></div>
+                </div>
+                <div class="text"><span class="value warning">- <span id="loss-pt">0</span></span> пациента в месяц
+                </div>
+              </div>
+              <div class="loss-item danger">
+                <div class="result_reytingBlock">
+                  <div class="icon danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <rect width="20" height="20" rx="10" fill="#D50035" />
+                      <path
+                        d="M10.0011 14.5226C9.1685 14.5226 8.48992 13.868 8.48992 13.0636C8.48992 12.2582 9.16752 11.6027 10.0011 11.6027C10.8347 11.6027 11.5123 12.2582 11.5123 13.0636C11.5123 13.868 10.8338 14.5226 10.0011 14.5226ZM11.5933 6.91446C11.5825 6.94366 10.2273 10.181 10.2273 10.181C10.1903 10.2696 10.1006 10.328 10.0021 10.328C9.90363 10.328 9.81393 10.2696 9.77688 10.181L8.42069 6.94272C8.33932 6.74644 8.29666 6.53719 8.29492 6.32576C8.29492 5.41681 9.06028 4.6774 10.0011 4.6774C10.2775 4.67808 10.5495 4.74352 10.7939 4.8681C11.0383 4.99268 11.2477 5.17268 11.4043 5.39265C11.5608 5.61263 11.6598 5.86602 11.6927 6.13108C11.7257 6.39614 11.6915 6.66495 11.5933 6.91446Z"
+                        fill="white" />
+                    </svg>
+                  </div>
+                  <div class="progress-bar danger" id="prog-mo"></div>
+                </div>
+                <div class="text"><span class="value danger">- <span id="loss-mo">0</span> ₽</span> ежемесячно</div>
+              </div>
+              <div class="loss-item danger">
+                <div class="result_reytingBlock">
+                  <div class="icon danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <rect width="20" height="20" rx="10" fill="#D50035" />
+                      <path
+                        d="M10.0011 14.5226C9.1685 14.5226 8.48992 13.868 8.48992 13.0636C8.48992 12.2582 9.16752 11.6027 10.0011 11.6027C10.8347 11.6027 11.5123 12.2582 11.5123 13.0636C11.5123 13.868 10.8338 14.5226 10.0011 14.5226ZM11.5933 6.91446C11.5825 6.94366 10.2273 10.181 10.2273 10.181C10.1903 10.2696 10.1006 10.328 10.0021 10.328C9.90363 10.328 9.81393 10.2696 9.77688 10.181L8.42069 6.94272C8.33932 6.74644 8.29666 6.53719 8.29492 6.32576C8.29492 5.41681 9.06028 4.6774 10.0011 4.6774C10.2775 4.67808 10.5495 4.74352 10.7939 4.8681C11.0383 4.99268 11.2477 5.17268 11.4043 5.39265C11.5608 5.61263 11.6598 5.86602 11.6927 6.13108C11.7257 6.39614 11.6915 6.66495 11.5933 6.91446Z"
+                        fill="white" />
+                    </svg>
+                  </div>
+                  <div class="progress-bar danger" id="prog-yr"></div>
+                </div>
+                <div class="text"><span class="value danger">- <span id="loss-yr">0</span> ₽</span> в год</div>
+              </div>
+
+              <div class="reasons-title">Причины</div>
+              <div class="reason-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <rect width="20" height="20" rx="10" fill="#F7CCD7" />
+                  <path
+                    d="M7.5808 6.05478C7.38074 5.86156 7.1128 5.75464 6.83467 5.75706C6.55655 5.75948 6.2905 5.87103 6.09383 6.0677C5.89716 6.26437 5.78561 6.53042 5.78319 6.80854C5.78077 7.08667 5.88769 7.35461 6.08091 7.55467L8.51319 9.98695L6.08091 12.4192C5.9796 12.5171 5.89879 12.6341 5.8432 12.7635C5.78761 12.893 5.75834 13.0322 5.75712 13.173C5.7559 13.3138 5.78274 13.4535 5.83607 13.5839C5.88941 13.7142 5.96817 13.8327 6.06776 13.9323C6.16736 14.0319 6.28579 14.1106 6.41616 14.164C6.54652 14.2173 6.68619 14.2441 6.82704 14.2429C6.96788 14.2417 7.10707 14.2124 7.23649 14.1568C7.3659 14.1012 7.48295 14.0204 7.5808 13.9191L10.0131 11.4868L12.4454 13.9191C12.6454 14.1123 12.9134 14.2193 13.1915 14.2168C13.4696 14.2144 13.7357 14.1029 13.9323 13.9062C14.129 13.7095 14.2406 13.4435 14.243 13.1654C14.2454 12.8872 14.1385 12.6193 13.9453 12.4192L11.513 9.98695L13.9453 7.55467C14.1385 7.35461 14.2454 7.08667 14.243 6.80854C14.2406 6.53042 14.129 6.26437 13.9323 6.0677C13.7357 5.87103 13.4696 5.75948 13.1915 5.75706C12.9134 5.75464 12.6454 5.86156 12.4454 6.05478L10.0131 8.48706L7.5808 6.05478Z"
+                    fill="#D50035" />
+                </svg>
+                &nbsp;Наличие негатива
+              </div>
+              <div class="reason-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <rect width="20" height="20" rx="10" fill="#F7CCD7" />
+                  <path
+                    d="M7.5808 6.05478C7.38074 5.86156 7.1128 5.75464 6.83467 5.75706C6.55655 5.75948 6.2905 5.87103 6.09383 6.0677C5.89716 6.26437 5.78561 6.53042 5.78319 6.80854C5.78077 7.08667 5.88769 7.35461 6.08091 7.55467L8.51319 9.98695L6.08091 12.4192C5.9796 12.5171 5.89879 12.6341 5.8432 12.7635C5.78761 12.893 5.75834 13.0322 5.75712 13.173C5.7559 13.3138 5.78274 13.4535 5.83607 13.5839C5.88941 13.7142 5.96817 13.8327 6.06776 13.9323C6.16736 14.0319 6.28579 14.1106 6.41616 14.164C6.54652 14.2173 6.68619 14.2441 6.82704 14.2429C6.96788 14.2417 7.10707 14.2124 7.23649 14.1568C7.3659 14.1012 7.48295 14.0204 7.5808 13.9191L10.0131 11.4868L12.4454 13.9191C12.6454 14.1123 12.9134 14.2193 13.1915 14.2168C13.4696 14.2144 13.7357 14.1029 13.9323 13.9062C14.129 13.7095 14.2406 13.4435 14.243 13.1654C14.2454 12.8872 14.1385 12.6193 13.9453 12.4192L11.513 9.98695L13.9453 7.55467C14.1385 7.35461 14.2454 7.08667 14.243 6.80854C14.2406 6.53042 14.129 6.26437 13.9323 6.0677C13.7357 5.87103 13.4696 5.75948 13.1915 5.75706C12.9134 5.75464 12.6454 5.86156 12.4454 6.05478L10.0131 8.48706L7.5808 6.05478Z"
+                    fill="#D50035" />
+                </svg>
+                &nbsp;Низкий рейтинг
+              </div>
+              <div class="reason-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <rect width="20" height="20" rx="10" fill="#F7CCD7" />
+                  <path
+                    d="M7.5808 6.05478C7.38074 5.86156 7.1128 5.75464 6.83467 5.75706C6.55655 5.75948 6.2905 5.87103 6.09383 6.0677C5.89716 6.26437 5.78561 6.53042 5.78319 6.80854C5.78077 7.08667 5.88769 7.35461 6.08091 7.55467L8.51319 9.98695L6.08091 12.4192C5.9796 12.5171 5.89879 12.6341 5.8432 12.7635C5.78761 12.893 5.75834 13.0322 5.75712 13.173C5.7559 13.3138 5.78274 13.4535 5.83607 13.5839C5.88941 13.7142 5.96817 13.8327 6.06776 13.9323C6.16736 14.0319 6.28579 14.1106 6.41616 14.164C6.54652 14.2173 6.68619 14.2441 6.82704 14.2429C6.96788 14.2417 7.10707 14.2124 7.23649 14.1568C7.3659 14.1012 7.48295 14.0204 7.5808 13.9191L10.0131 11.4868L12.4454 13.9191C12.6454 14.1123 12.9134 14.2193 13.1915 14.2168C13.4696 14.2144 13.7357 14.1029 13.9323 13.9062C14.129 13.7095 14.2406 13.4435 14.243 13.1654C14.2454 12.8872 14.1385 12.6193 13.9453 12.4192L11.513 9.98695L13.9453 7.55467C14.1385 7.35461 14.2454 7.08667 14.243 6.80854C14.2406 6.53042 14.129 6.26437 13.9323 6.0677C13.7357 5.87103 13.4696 5.75948 13.1915 5.75706C12.9134 5.75464 12.6454 5.86156 12.4454 6.05478L10.0131 8.48706L7.5808 6.05478Z"
+                    fill="#D50035" />
+                </svg>
+                &nbsp;Отсутствие работы с отзывами
+              </div>
+            </div>
+
+            <!-- State: Good Reputation -->
+            <div id="resultGood" class="resultStatus" style="display: none;">
+              <h3 class="result-title">Отличная<br>репутация</h3>
+              <p class="text-center" style="font-size:14px; color: var(--Gray-Lt, #8A96AF); margin-bottom: 20px;">У вас
+                нет потерь от плохой репутации.</p>
+              <div class="loss-item">
+                <div class="icon" style="background:#34C759">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 10L12 3M12 3L19 10M12 3V21" stroke="white" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="text" style="width: 100%; text-align: left; margin-left: 15px;">
+                  <span class="value" style="color:#34C759">+ <span id="gain-mo">0</span> ₽</span> в месяц
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-auto resultStatus_btn__block">
+              <!-- Growth Info -->
+              <div class="growth-box" id="growth-loss-state" style="display: none;">
+                <span>+18–30</span> пациентов в месяц,<br>при росте рейтинга до <span>4,7</span>
+              </div>
+              <div class="growth-box" id="growth-good-state" style="display: none;">
+                Так держать! Вы не теряете пациентов.
+              </div>
+
+              <!-- Buttons -->
+              <button class="action-btn" id="btn-loss-state" style="display: none;" data-bs-toggle="modal"
+                data-bs-target="#formModal" data-bs-dismiss="modal">
+                <img src="assets/imgs/file-document.png" alt="Doc">
+                <div class="text-start">
+                  <div class="text1">Получить разбор</div>
+                  <div class="text2">вашей ситуации бесплатно</div>
+                </div>
+              </button>
+              <button class="action-btn" id="btn-good-state" style="display: none;" data-bs-toggle="modal"
+                data-bs-target="#formModal" data-bs-dismiss="modal">
+                <img src="assets/imgs/file-document.png" alt="Doc">
+                <div class="text-start">
+                  <div class="text1">Консультация</div>
+                  <div class="text2">Узнать точки роста</div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- back btn -->
+    <div class="back-btn-wrapper">
+      <div class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+          <path
+            d="M12.5 20.8334L12.5 11.4584M8.33329 14.5834L11.7634 11.1533C12.1702 10.7465 12.8297 10.7465 13.2365 11.1533L16.6666 14.5834M4.16663 4.16669L20.8333 4.16669"
+            stroke="#8A96AF" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+    <!-- revenue-loss-section start -->
+    <section class="revenue-loss">
+      <div class="container">
+        <h2 class="title">Вы <span>теряете деньги</span> не из-за <br> отсутствия пациентов</h2>
+        <p class="description">
+          А потому что у вас нет системы, которая показывает, <br> где именно они теряются
+        </p>
+        <div class="block d-flex gap-3 align-items-stretch flex-wrap">
+          <div class="item">
+            <p class="item_title">
+              Звонки
+            </p>
+            <p class="item_description">
+              Часть пациентов не дозванивается или остается без ответа
+            </p>
+            <img src="assets/imgs/warning2.svg" alt="warning2.svg" width="20px" height="20px" class="warning">
+            <p class="bottom_description">
+              15 пропущенных звонков в день × 3500 ₽ средний чек = 1,5 млн ₽ упущенной выручки в месяц. Мы возвращаем
+              80% таких звонков через контроль и скрипты
+            </p>
+          </div>
+          <div class="item">
+            <p class="item_title">
+              Отзывы 
+            </p>
+            <p class="item_description">
+              Негатив влияет на выбор пациента, но не обрабатывается
+            </p>
+            <img src="assets/imgs/warning2.svg" alt="warning2.svg" width="20px" height="20px" class="warning">
+            <p class="bottom_description">
+              Убираем негатив, запускаем систему контроля онлайн репутации в интернете
+            </p>
+          </div>
+          <div class="item">
+            <p class="item_title">
+              Маркетинг 
+            </p>
+            <p class="item_description">
+              Нет контроля окупаемости кана-лов привлечения
+            </p>
+            <img src="assets/imgs/warning2.svg" alt="warning2.svg" width="20px" height="20px" class="warning">
+            <p class="bottom_description">
+              Вы платите за лиды, не зная, какой канал окупается. Мы строим юнит-экономику: стоимость пациента vs. его
+              пожизненная ценность. Снижаем цену привлечения на 20-40%
+            </p>
+          </div>
+          <div class="item">
+            <p class="item_title">
+              Одноразовые пациенты
+            </p>
+            <p class="item_description">
+              Нужен какой-то текст для консистентности
+            </p>
+            <img src="assets/imgs/warning2.svg" alt="warning2.svg" width="20px" height="20px" class="warning">
+            <p class="bottom_description">
+              Пациент пришел на консультацию и ушел. Мы внедряем пакетные программы лечения и загрузку диагностики. Рост
+              выручки с 1 пациента до +60%
+            </p>
+          </div>
+          <div class="item">
+            <p class="item_title">
+              Деньги 
+            </p>
+            <p class="item_description">
+              Вы не видите, сколько именно теряете
+            </p>
+            <img src="assets/imgs/warning2.svg" alt="warning2.svg" width="20px" height="20px" class="warning">
+            <p class="bottom_description">
+              Нужен какой-то текст для консистентности. Мы внедряем пакетные программы лечения и загрузку диагностики.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- revenue-loss-section end -->
+    <section class="system-problem">
+      <div class="container">
+        <div class="main-block">
+          <h2 class="title"><span>Проблема не в маркетинге.</span> Проблема в отсутствии <br> системы управления доходом
+          </h2>
+          <div class="block"></div>
+          <p class="description">Большинство клиник теряют 20–40% потенциальной выручки
+            <span>и не понимают этого</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- reputation-section start -->
+    <section class="reputation-section">
+      <div class="container">
+        <div class="reputation_block">
+          <div>
+            <h2 class="main-title"><span>Рост клиники</span> — это управляемый процесс</h2>
+            <div class="main-description">Мы берем под контроль ключевые точки, <br> в которых клиника теряет деньги
+            </div>
+          </div>
+          <div class="reputation-swiper swiper">
+            <div class="boxes swiper-wrapper">
+              <div class="box swiper-slide">
+                <img src="assets/imgs/reputation_icon1.svg" alt="reputation_icon1.svg" class="box_icon">
+                <div class="box_title">Шаг 1 <span>/4</span></div>
+                <p class="box_description1">Погружаемся в <br> экономику клиники</p>
+                <p class="box_description2">Маркетинг, запись, загрузка врачей, выручка</p>
+                <div class="bottom-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M10.125 7L13.25 10.125L10.125 13.25M13.25 10.125H7M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                      stroke="#DDE1EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="box swiper-slide">
+                <img src="assets/imgs/reputation_icon2.svg" alt="reputation_icon2.svg" class="box_icon">
+                <div class="box_title">Шаг 2 <span>/4</span></div>
+                <p class="box_description1">Находим точки <br> потери денег</p>
+                <p class="box_description2">Где теряются пациенты и выручка</p>
+                <div class="bottom-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M10.125 7L13.25 10.125L10.125 13.25M13.25 10.125H7M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                      stroke="#DDE1EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="box swiper-slide">
+                <img src="assets/imgs/reputation_icon3.svg" alt="reputation_icon3.svg" class="box_icon">
+                <div class="box_title">Шаг 3 <span>/4</span></div>
+                <p class="box_description1">Внедряем систему <br> управления</p>
+                <p class="box_description2">Контролируем маркетинг, запись и загрузку врачей</p>
+                <div class="bottom-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M10.125 7L13.25 10.125L10.125 13.25M13.25 10.125H7M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                      stroke="#DDE1EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="box swiper-slide">
+                <img src="assets/imgs/reputation_icon4.svg" alt="reputation_icon4.svg" class="box_icon">
+                <div class="box_title">Шаг 4 <span>/4</span></div>
+                <p class="box_description1">Управляем <br>
+                  ростом дохода</p>
+                <p class="box_description2">Еженедельное операционное управление</p>
+
+                <div class="bottom-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M10.125 7L13.25 10.125L10.125 13.25M13.25 10.125H7M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                      stroke="#DDE1EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination reputation-pagination"></div>
+          </div>
+
+          <div class="bottom-description">
+            Это не разовый проект <br>
+            Это постоянное управление ростом клиники
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- reputation-results end -->
+
+    <section class="growth-results">
+      <div class="container">
+        <h2 class="main-title"><span>Результаты клиник-партнеров</span> через 3-6 месяцев работы с нами</h2>
+
+        <div class="growth-results-swiper swiper">
+          <div class="cards swiper-wrapper align-items-center">
+            <div class="card swiper-slide">
+              <img src="assets/imgs/growth-results_teeth.png" alt="growth-results_teeth.png" class="top-img">
+              <div class="card_contents">
+                <div class="number-block">
+                  <div class="number">1</div>
+                  <div class="number-contents">
+                    Стоматология
+                    <span>3 кресла, спальный район</span>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="conversion-block">
+                  <div class="item">
+                    <div class="status">Было</div>
+                    <div class="price">2,8 млн ₽/мес</div>
+                    <div class="description">конверсия в <br> запись 37%</div>
+                  </div>
+                  <div class="middle-icon d-flex flex-column justify-content-center align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                      <path
+                        d="M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                        fill="#008CFF" />
+                      <path
+                        d="M10.125 7L13.25 10.125L10.125 13.25M13.25 10.125H7M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <div class="status blue">Стало</div>
+                    <div class="price blue">3,9 млн ₽/мес</div>
+                    <div class="description">+39% за <br> 4 месяца</div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="growth">
+                  <div class="growth_title">Рычаги роста:</div>
+                  <div class="growth-items">
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Контроль пропущенных</div>
+                    </div>
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Пакет «Имплантация под ключ»</div>
+                    </div>
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Скрипты администраторов</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="assets/imgs/growth-results_card-img1.png" alt="growth-results_card-img1.png" class="card-img">
+            </div>
+            <div class="card swiper-slide">
+              <img src="assets/imgs/growth-results_plus.png" alt="growth-results_plus.png" class="top-img">
+              <div class="card_contents">
+                <div class="number-block">
+                  <div class="number">2</div>
+                  <div class="number-contents">
+                    Многопрофильная <br> клиника
+                    <span>Гинекология, УЗИ, анализы</span>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="conversion-block">
+                  <div class="item">
+                    <div class="status">Было</div>
+                    <div class="price">5,2 млн ₽/мес</div>
+                    <div class="description">стоимость <br> привлечения<br> пациента <br> 1200 ₽</div>
+                  </div>
+                  <div class="middle-icon d-flex flex-column justify-content-center align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                      <path
+                        d="M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                        fill="#008CFF" />
+                      <path
+                        d="M10.125 7L13.25 10.125L10.125 13.25M13.25 10.125H7M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <div class="status blue">Стало</div>
+                    <div class="price blue">6,7 млн ₽/мес</div>
+                    <div class="description">стоимость <br> пациента 890 <br> ₽ (-26%)</div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="growth">
+                  <div class="growth_title">Рычаги роста:</div>
+                  <div class="growth-items">
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Перераспределение бюджета с <br> агрегаторов на SEO+контент</div>
+                    </div>
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Программы годового наблюдения</div>
+                    </div>
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Скрипты администраторов</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="assets/imgs/growth-results_card-img2.png" alt="growth-results_card-img2.png" class="card-img">
+            </div>
+            <div class="card swiper-slide">
+              <img src="assets/imgs/growth-results_head.png" alt="growth-results_head.png" class="top-img">
+              <div class="card_contents">
+                <div class="number-block">
+                  <div class="number">3</div>
+                  <div class="number-contents">
+                    Косметология
+                    <span>Лицо, тело</span>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="conversion-block">
+                  <div class="item">
+                    <div class="status">Было</div>
+                    <div class="price">1,9 млн ₽/мес</div>
+                    <div class="description">средний чек <br> 4500 ₽</div>
+                  </div>
+                  <div class="middle-icon d-flex flex-column justify-content-center align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                      <path
+                        d="M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                        fill="#008CFF" />
+                      <path
+                        d="M10.125 7L13.25 10.125L10.125 13.25M13.25 10.125H7M19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5C4.94733 19.5 0.75 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.75 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="item">
+                    <div class="status blue">Стало</div>
+                    <div class="price blue">2,6 млн ₽/мес</div>
+                    <div class="description">средний чек <br> 7200 ₽ (+60%)</div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="growth">
+                  <div class="growth_title">Рычаги роста:</div>
+                  <div class="growth-items">
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Пакетные предложения «3 <br> процедуры по цене 2»</div>
+                    </div>
+                    <div class="growth-item">
+                      <img src="assets/imgs/growth_checked-icon.svg" class="checked_icon" alt="growth_checked-icon.svg">
+                      <div class="price">Триггерные рассылки после <br> консультации</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <img src="assets/imgs/growth-results_card-img3.png" alt="growth-results_card-img3.png" class="card-img">
+            </div>
+          </div>
+          <div class="swiper-pagination growth-results-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="chaos-to-system">
+      <div class="container">
+        <div class="block">
+          <h2 class="block_title">Мы превращаем хаос <br> в систему управления доходом</h2>
+          <p class="block_description">Берем под контроль ключевые процессы, <br> которые напрямую влияют на выручку
+            клиники</p>
+          <div class="chaos-timeline">
+            <!-- Item 1 -->
+            <div class="chaos-timeline_item">
+              <div class="chaos-timeline_content">
+                <div class="chaos-timeline_title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path
+                      d="M28.7477 20C28.5542 20 28.3634 19.9551 28.1902 19.8688L25.6904 18.6188C25.3937 18.4706 25.1681 18.2106 25.0631 17.896C24.958 17.5814 24.9823 17.238 25.1305 16.9412C25.2786 16.6445 25.5386 16.4188 25.8532 16.3138C26.1677 16.2088 26.5111 16.2331 26.8078 16.3812L29.3076 17.6312C29.5599 17.757 29.7623 17.9644 29.8819 18.2197C30.0015 18.475 30.0313 18.7632 29.9665 19.0376C29.9016 19.312 29.7459 19.5563 29.5247 19.7311C29.3034 19.9058 29.0296 20.0005 28.7477 20ZM26.8066 8.625L29.3064 7.375C29.6031 7.22681 29.8287 6.96682 29.9338 6.65223C30.0388 6.33764 30.0145 5.99421 29.8663 5.6975C29.7182 5.40079 29.4582 5.1751 29.1436 5.07008C28.8291 4.96506 28.4857 4.98931 28.189 5.1375L25.6892 6.3875C25.3925 6.53569 25.1668 6.79568 25.0618 7.11027C24.9568 7.42486 24.981 7.76829 25.1292 8.065C25.2774 8.36171 25.5374 8.5874 25.8519 8.69242C26.1665 8.79744 26.5099 8.77319 26.8066 8.625ZM29.9976 12.5C29.9976 12.1685 29.8659 11.8505 29.6315 11.6161C29.3971 11.3817 29.0792 11.25 28.7477 11.25H26.2479C25.9164 11.25 25.5985 11.3817 25.3641 11.6161C25.1297 11.8505 24.998 12.1685 24.998 12.5C24.998 12.8315 25.1297 13.1495 25.3641 13.3839C25.5985 13.6183 25.9164 13.75 26.2479 13.75H28.7477C29.0792 13.75 29.3971 13.6183 29.6315 13.3839C29.8659 13.1495 29.9976 12.8315 29.9976 12.5ZM22.4982 23.75V1.25C22.4982 0.918479 22.3665 0.600537 22.1321 0.366117C21.8977 0.131696 21.5798 0 21.2483 0C20.9168 0 20.5989 0.131696 20.3645 0.366117C20.1301 0.600537 19.9984 0.918479 19.9984 1.25C19.9984 4.93625 16.7699 6.25 13.7489 6.25H4.9996C3.67362 6.25 2.40195 6.77678 1.46435 7.71447C0.526742 8.65215 0 9.92392 0 11.25L0 13.75C0 15.0761 0.526742 16.3479 1.46435 17.2855C2.40195 18.2232 3.67362 18.75 4.9996 18.75H13.7489C16.7699 18.75 19.9984 20.0637 19.9984 23.75C19.9984 24.0815 20.1301 24.3995 20.3645 24.6339C20.5989 24.8683 20.9168 25 21.2483 25C21.5798 25 21.8977 24.8683 22.1321 24.6339C22.3665 24.3995 22.4982 24.0815 22.4982 23.75ZM10.2317 21.25H4.9996C4.41766 21.2477 3.83797 21.1776 3.27224 21.0413L6.39698 28.0188C6.65941 28.6085 7.08716 29.1095 7.62843 29.4611C8.1697 29.8128 8.80129 29.9999 9.44674 30C9.96026 29.9993 10.4654 29.8701 10.9163 29.6242C11.3671 29.3782 11.7492 29.0234 12.0277 28.5919C12.3063 28.1605 12.4725 27.6662 12.5111 27.1541C12.5498 26.642 12.4597 26.1284 12.249 25.66L10.2317 21.25Z"
+                      fill="#2F6FED" />
+                  </svg>
+                  Маркетинг
+                </div>
+                <div class="chaos-timeline_box">
+                  <div class="chaos-timeline_status now">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14C10.866 14 14 10.866 14 7C13.9958 3.13573 10.8643 0.00418359 7 0ZM9.33332 8.50907C9.57037 8.72725 9.58568 9.09628 9.3675 9.33332C9.14933 9.57037 8.7803 9.58568 8.54325 9.3675C8.53139 9.35659 8.52001 9.34519 8.50907 9.33332L7 7.82482L5.4915 9.33332C5.25976 9.55713 4.89048 9.55071 4.66668 9.31897C4.44836 9.09292 4.44836 8.73455 4.66668 8.5085L6.17518 7L4.66668 5.4915C4.44287 5.25976 4.44929 4.89048 4.68103 4.66668C4.90708 4.44836 5.26545 4.44836 5.4915 4.66668L7 6.17518L8.50907 4.66668C8.72725 4.42963 9.09628 4.41432 9.33332 4.6325C9.57037 4.85067 9.58568 5.2197 9.3675 5.45675C9.35659 5.46861 9.34519 5.47999 9.33332 5.49093L7.82482 7L9.33332 8.50907Z"
+                          fill="#DC2626" />
+                      </svg>
+                      Сейчас
+                    </div>
+                    <div class="text">Заявки без контроля</div>
+                  </div>
+                  <div class="chaos-timeline_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="16" viewBox="0 0 31 16" fill="none">
+                      <path
+                        d="M28.9575 5.26769L24.1104 0.370483C23.994 0.253089 23.8554 0.159911 23.7028 0.0963244C23.5502 0.0327374 23.3865 0 23.2211 0C23.0558 0 22.8921 0.0327374 22.7395 0.0963244C22.5868 0.159911 22.4483 0.253089 22.3319 0.370483C22.0986 0.605151 21.9677 0.922595 21.9677 1.25348C21.9677 1.58437 22.0986 1.90182 22.3319 2.13648L26.7907 6.6329H1.25258C0.920396 6.6329 0.601822 6.76486 0.366936 6.99975C0.132049 7.23463 9.15527e-05 7.55321 9.15527e-05 7.88539C9.15527e-05 8.21756 0.132049 8.53614 0.366936 8.77103C0.601822 9.00591 0.920396 9.13787 1.25258 9.13787H26.8659L22.3319 13.6593C22.2145 13.7758 22.1213 13.9143 22.0577 14.0669C21.9941 14.2196 21.9614 14.3833 21.9614 14.5486C21.9614 14.7139 21.9941 14.8776 22.0577 15.0303C22.1213 15.1829 22.2145 15.3214 22.3319 15.4379C22.4483 15.5553 22.5868 15.6484 22.7395 15.712C22.8921 15.7756 23.0558 15.8083 23.2211 15.8083C23.3865 15.8083 23.5502 15.7756 23.7028 15.712C23.8554 15.6484 23.994 15.5553 24.1104 15.4379L28.9575 10.5782C29.6612 9.8737 30.0564 8.91869 30.0564 7.92296C30.0564 6.92723 29.6612 5.97222 28.9575 5.26769Z"
+                        fill="#64748B" />
+                    </svg>
+                  </div>
+                  <div class="chaos-timeline_status after">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.14008 0 0 3.14008 0 7C0 10.8599 3.14008 14 7 14C10.8599 14 14 10.8599 14 7C14 3.14008 10.8599 0 7 0ZM10.6167 6.132L8.03483 8.66658C7.57808 9.11458 6.99008 9.338 6.4015 9.338C5.81933 9.338 5.23717 9.11867 4.78217 8.67942L3.67442 7.59033C3.44458 7.36458 3.44167 6.99533 3.66742 6.7655C3.89258 6.53508 4.263 6.53217 4.49225 6.7585L5.5965 7.84408C6.04917 8.28158 6.76375 8.27925 7.21875 7.83358L9.8 5.29958C10.0292 5.07325 10.3973 5.07733 10.6248 5.30717C10.8506 5.537 10.8471 5.90625 10.6167 6.132Z"
+                          fill="#16A34A" />
+                      </svg>
+                      После
+                    </div>
+                    <div class="text">Управляемый поток<br>пациентов</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chaos-timeline_divider">1</div>
+              <div class="chaos-timeline_empty"></div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="chaos-timeline_item">
+              <div class="chaos-timeline_content">
+                <div class="chaos-timeline_title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <g clip-path="url(#clip0_256_564)">
+                      <path
+                        d="M29.9562 25.0075L28.7275 19.1887C27.96 16.7625 25.57 15 23.0425 15C20.36 15 17.9587 16.9212 17.3288 19.585L16.1213 25.0113C15.9963 25.6138 16.15 26.2362 16.5413 26.7162C16.9462 27.2137 17.5513 27.4988 18.2013 27.4988H20.2625C20.42 28.9025 21.5975 29.9988 23.0437 29.9988C24.49 29.9988 25.6675 28.9038 25.825 27.4988H27.88C28.5313 27.4988 29.1362 27.2125 29.5412 26.715C29.9325 26.2325 30.085 25.61 29.9575 25.0062L29.9562 25.0075ZM30 10H0V8.75C0 5.30375 2.80375 2.5 6.25 2.5H7.5V1.25C7.5 0.56 8.06 0 8.75 0C9.44 0 10 0.56 10 1.25V2.5H20V1.25C20 0.56 20.56 0 21.25 0C21.94 0 22.5 0.56 22.5 1.25V2.5H23.75C27.1963 2.5 30 5.30375 30 8.75V10ZM14.6012 28.2938C15.4825 29.3775 16.7937 30 18.2013 30H6.25C2.80375 30 0 27.1963 0 23.75V12.5H23.0413C19.2125 12.5 15.7863 15.2375 14.8875 19.0425L13.6725 24.5062C13.395 25.85 13.735 27.2313 14.6012 28.2938Z"
+                        fill="#2F6FED" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_256_564">
+                        <rect width="30" height="30" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Запись
+                </div>
+                <div class="chaos-timeline_box">
+                  <div class="chaos-timeline_status now">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14C10.866 14 14 10.866 14 7C13.9958 3.13573 10.8643 0.00418359 7 0ZM9.33332 8.50907C9.57037 8.72725 9.58568 9.09628 9.3675 9.33332C9.14933 9.57037 8.7803 9.58568 8.54325 9.3675C8.53139 9.35659 8.52001 9.34519 8.50907 9.33332L7 7.82482L5.4915 9.33332C5.25976 9.55713 4.89048 9.55071 4.66668 9.31897C4.44836 9.09292 4.44836 8.73455 4.66668 8.5085L6.17518 7L4.66668 5.4915C4.44287 5.25976 4.44929 4.89048 4.68103 4.66668C4.90708 4.44836 5.26545 4.44836 5.4915 4.66668L7 6.17518L8.50907 4.66668C8.72725 4.42963 9.09628 4.41432 9.33332 4.6325C9.57037 4.85067 9.58568 5.2197 9.3675 5.45675C9.35659 5.46861 9.34519 5.47999 9.33332 5.49093L7.82482 7L9.33332 8.50907Z"
+                          fill="#DC2626" />
+                      </svg>
+                      Сейчас
+                    </div>
+                    <div class="text">Пациенты теряются</div>
+                  </div>
+                  <div class="chaos-timeline_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="16" viewBox="0 0 31 16" fill="none">
+                      <path
+                        d="M28.9576 5.26769L24.1104 0.370483C23.994 0.253089 23.8555 0.159911 23.7028 0.0963244C23.5502 0.0327374 23.3865 0 23.2212 0C23.0558 0 22.8921 0.0327374 22.7395 0.0963244C22.5869 0.159911 22.4483 0.253089 22.3319 0.370483C22.0986 0.605151 21.9677 0.922595 21.9677 1.25348C21.9677 1.58437 22.0986 1.90182 22.3319 2.13648L26.7908 6.6329H1.25261C0.920427 6.6329 0.601852 6.76486 0.366966 6.99975C0.13208 7.23463 0.00012207 7.55321 0.00012207 7.88539C0.00012207 8.21756 0.13208 8.53614 0.366966 8.77103C0.601852 9.00591 0.920427 9.13787 1.25261 9.13787H26.8659L22.3319 13.6593C22.2145 13.7758 22.1213 13.9143 22.0578 14.0669C21.9942 14.2196 21.9614 14.3833 21.9614 14.5486C21.9614 14.7139 21.9942 14.8776 22.0578 15.0303C22.1213 15.1829 22.2145 15.3214 22.3319 15.4379C22.4483 15.5553 22.5869 15.6484 22.7395 15.712C22.8921 15.7756 23.0558 15.8083 23.2212 15.8083C23.3865 15.8083 23.5502 15.7756 23.7028 15.712C23.8555 15.6484 23.994 15.5553 24.1104 15.4379L28.9576 10.5782C29.6612 9.8737 30.0564 8.91869 30.0564 7.92296C30.0564 6.92723 29.6612 5.97222 28.9576 5.26769Z"
+                        fill="#64748B" />
+                    </svg>
+                  </div>
+                  <div class="chaos-timeline_status after">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.14008 0 0 3.14008 0 7C0 10.8599 3.14008 14 7 14C10.8599 14 14 10.8599 14 7C14 3.14008 10.8599 0 7 0ZM10.6167 6.132L8.03483 8.66658C7.57808 9.11458 6.99008 9.338 6.4015 9.338C5.81933 9.338 5.23717 9.11867 4.78217 8.67942L3.67442 7.59033C3.44458 7.36458 3.44167 6.99533 3.66742 6.7655C3.89258 6.53508 4.263 6.53217 4.49225 6.7585L5.5965 7.84408C6.04917 8.28158 6.76375 8.27925 7.21875 7.83358L9.8 5.29958C10.0292 5.07325 10.3973 5.07733 10.6248 5.30717C10.8506 5.537 10.8471 5.90625 10.6167 6.132Z"
+                          fill="#16A34A" />
+                      </svg>
+                      После
+                    </div>
+                    <div class="text">Высокая конверсия<br>записи</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chaos-timeline_divider">2</div>
+              <div class="chaos-timeline_empty"></div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="chaos-timeline_item">
+              <div class="chaos-timeline_content">
+                <div class="chaos-timeline_title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <g clip-path="url(#clip0_259_602)">
+                      <path
+                        d="M15.0008 7.19174L3.75932 3.41798L13.0141 0.321906C14.2969 -0.107302 15.6847 -0.107302 16.9676 0.321906L26.2436 3.42551L15.0008 7.19174ZM11.0224 14.2486L13.7418 9.70047L3.80683 6.376C3.03539 6.11747 2.19018 6.43247 1.77133 7.1315L0.36223 9.49089C-0.471725 10.8864 0.195939 12.6974 1.73382 13.2119L8.08663 15.3379C9.19815 15.7094 10.4197 15.2563 11.0224 14.2486ZM3.73806 3.41045V3.42425L3.75932 3.41798L3.73806 3.41045ZM13.7405 30V14.5786L13.1654 15.54C12.2377 17.0911 10.6098 17.9809 8.89558 17.9809C8.3642 17.9809 7.82532 17.8968 7.29519 17.7186L2.48775 16.111V21.8312C2.48775 24.532 4.20943 26.9303 6.76255 27.7837L12.3077 29.6386C12.7753 29.7904 13.2554 29.9147 13.7405 29.9987V30ZM29.6444 9.53231L28.2091 7.1315C27.7915 6.43247 26.945 6.11747 26.1736 6.376L16.2399 9.69922L18.9593 14.2473C19.562 15.2563 20.7823 15.7094 21.8938 15.3367L28.2929 13.1956C29.807 12.6886 30.4646 10.9053 29.6432 9.53105L29.6444 9.53231ZM21.0861 17.9822C19.3719 17.9822 17.744 17.0936 16.8163 15.5412L16.2411 14.5799V29.9937C16.7688 29.9009 17.2914 29.7653 17.7865 29.5997H17.799L23.2191 27.7849C25.7722 26.9303 27.4939 24.5332 27.4939 21.8325V16.111L22.6865 17.7199C22.1563 17.8981 21.6175 17.9822 21.0861 17.9822Z"
+                        fill="#2F6FED" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_259_602">
+                        <rect width="30" height="30" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Продукт
+                </div>
+                <div class="chaos-timeline_box">
+                  <div class="chaos-timeline_status now">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14C10.866 14 14 10.866 14 7C13.9958 3.13573 10.8643 0.00418359 7 0ZM9.33332 8.50907C9.57037 8.72725 9.58568 9.09628 9.3675 9.33332C9.14933 9.57037 8.7803 9.58568 8.54325 9.3675C8.53139 9.35659 8.52001 9.34519 8.50907 9.33332L7 7.82482L5.4915 9.33332C5.25976 9.55713 4.89048 9.55071 4.66668 9.31897C4.44836 9.09292 4.44836 8.73455 4.66668 8.5085L6.17518 7L4.66668 5.4915C4.44287 5.25976 4.44929 4.89048 4.68103 4.66668C4.90708 4.44836 5.26545 4.44836 5.4915 4.66668L7 6.17518L8.50907 4.66668C8.72725 4.42963 9.09628 4.41432 9.33332 4.6325C9.57037 4.85067 9.58568 5.2197 9.3675 5.45675C9.35659 5.46861 9.34519 5.47999 9.33332 5.49093L7.82482 7L9.33332 8.50907Z"
+                          fill="#DC2626" />
+                      </svg>
+                      Сейчас
+                    </div>
+                    <div class="text">Развивается стихийно</div>
+                  </div>
+                  <div class="chaos-timeline_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="16" viewBox="0 0 31 16" fill="none">
+                      <path
+                        d="M28.9575 5.26769L24.1104 0.370483C23.994 0.253089 23.8554 0.159911 23.7028 0.0963244C23.5502 0.0327374 23.3865 0 23.2211 0C23.0558 0 22.8921 0.0327374 22.7395 0.0963244C22.5868 0.159911 22.4483 0.253089 22.3319 0.370483C22.0986 0.605151 21.9677 0.922595 21.9677 1.25348C21.9677 1.58437 22.0986 1.90182 22.3319 2.13648L26.7907 6.6329H1.25258C0.920396 6.6329 0.601822 6.76486 0.366936 6.99975C0.132049 7.23463 9.15527e-05 7.55321 9.15527e-05 7.88539C9.15527e-05 8.21756 0.132049 8.53614 0.366936 8.77103C0.601822 9.00591 0.920396 9.13787 1.25258 9.13787H26.8659L22.3319 13.6593C22.2145 13.7758 22.1213 13.9143 22.0577 14.0669C21.9941 14.2196 21.9614 14.3833 21.9614 14.5486C21.9614 14.7139 21.9941 14.8776 22.0577 15.0303C22.1213 15.1829 22.2145 15.3214 22.3319 15.4379C22.4483 15.5553 22.5868 15.6484 22.7395 15.712C22.8921 15.7756 23.0558 15.8083 23.2211 15.8083C23.3865 15.8083 23.5502 15.7756 23.7028 15.712C23.8554 15.6484 23.994 15.5553 24.1104 15.4379L28.9575 10.5782C29.6612 9.8737 30.0564 8.91869 30.0564 7.92296C30.0564 6.92723 29.6612 5.97222 28.9575 5.26769Z"
+                        fill="#64748B" />
+                    </svg>
+                  </div>
+                  <div class="chaos-timeline_status after">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.14008 0 0 3.14008 0 7C0 10.8599 3.14008 14 7 14C10.8599 14 14 10.8599 14 7C14 3.14008 10.8599 0 7 0ZM10.6167 6.132L8.03483 8.66658C7.57808 9.11458 6.99008 9.338 6.4015 9.338C5.81933 9.338 5.23717 9.11867 4.78217 8.67942L3.67442 7.59033C3.44458 7.36458 3.44167 6.99533 3.66742 6.7655C3.89258 6.53508 4.263 6.53217 4.49225 6.7585L5.5965 7.84408C6.04917 8.28158 6.76375 8.27925 7.21875 7.83358L9.8 5.29958C10.0292 5.07325 10.3973 5.07733 10.6248 5.30717C10.8506 5.537 10.8471 5.90625 10.6167 6.132Z"
+                          fill="#16A34A" />
+                      </svg>
+                      После
+                    </div>
+                    <div class="text">Управляется на<br>основе KPI</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chaos-timeline_divider">3</div>
+              <div class="chaos-timeline_empty"></div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="chaos-timeline_item">
+              <div class="chaos-timeline_content">
+                <div class="chaos-timeline_title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path
+                      d="M12.5262 15C8.39 15 5.02625 11.6362 5.02625 7.5C5.02625 3.36375 8.39125 0 12.5262 0C16.6612 0 20.0262 3.36375 20.0262 7.5C20.0262 11.6362 16.6625 15 12.5262 15ZM15 22.73V17.5H8.72375V22.8463C9.4675 23.2788 9.97375 24.0763 9.97375 25C9.97375 26.3813 8.855 27.5 7.47375 27.5C6.0925 27.5 4.97375 26.3813 4.97375 25C4.97375 24.0775 5.48 23.28 6.22375 22.8463V17.5025C2.79 17.5175 0 20.3125 0 23.75V30H12.5V26.25C12.5 24.6225 13.5487 23.2475 15 22.73ZM18.75 17.5H17.5V22.73C18.9513 23.2475 20 24.6225 20 26.25V30H25V23.75C25 20.3037 22.1963 17.5 18.75 17.5ZM16.25 25C15.56 25 15 25.56 15 26.25V30H17.5V26.25C17.5 25.56 16.94 25 16.25 25Z"
+                      fill="#2F6FED" />
+                  </svg>
+                  Врачи
+                </div>
+                <div class="chaos-timeline_box">
+                  <div class="chaos-timeline_status now">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14C10.866 14 14 10.866 14 7C13.9958 3.13573 10.8643 0.00418359 7 0ZM9.33332 8.50907C9.57037 8.72725 9.58568 9.09628 9.3675 9.33332C9.14933 9.57037 8.7803 9.58568 8.54325 9.3675C8.53139 9.35659 8.52001 9.34519 8.50907 9.33332L7 7.82482L5.4915 9.33332C5.25976 9.55713 4.89048 9.55071 4.66668 9.31897C4.44836 9.09292 4.44836 8.73455 4.66668 8.5085L6.17518 7L4.66668 5.4915C4.44287 5.25976 4.44929 4.89048 4.68103 4.66668C4.90708 4.44836 5.26545 4.44836 5.4915 4.66668L7 6.17518L8.50907 4.66668C8.72725 4.42963 9.09628 4.41432 9.33332 4.6325C9.57037 4.85067 9.58568 5.2197 9.3675 5.45675C9.35659 5.46861 9.34519 5.47999 9.33332 5.49093L7.82482 7L9.33332 8.50907Z"
+                          fill="#DC2626" />
+                      </svg>
+                      Сейчас
+                    </div>
+                    <div class="text">Незаполненное<br>расписание</div>
+                  </div>
+                  <div class="chaos-timeline_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="16" viewBox="0 0 31 16" fill="none">
+                      <path
+                        d="M28.9574 5.26769L24.1103 0.370483C23.9939 0.253089 23.8554 0.159911 23.7027 0.0963244C23.5501 0.0327374 23.3864 0 23.2211 0C23.0557 0 22.892 0.0327374 22.7394 0.0963244C22.5867 0.159911 22.4482 0.253089 22.3318 0.370483C22.0985 0.605151 21.9676 0.922595 21.9676 1.25348C21.9676 1.58437 22.0985 1.90182 22.3318 2.13648L26.7906 6.6329H1.25248C0.920304 6.6329 0.60173 6.76486 0.366844 6.99975C0.131958 7.23463 0 7.55321 0 7.88539C0 8.21756 0.131958 8.53614 0.366844 8.77103C0.60173 9.00591 0.920304 9.13787 1.25248 9.13787H26.8658L22.3318 13.6593C22.2144 13.7758 22.1212 13.9143 22.0576 14.0669C21.994 14.2196 21.9613 14.3833 21.9613 14.5486C21.9613 14.7139 21.994 14.8776 22.0576 15.0303C22.1212 15.1829 22.2144 15.3214 22.3318 15.4379C22.4482 15.5553 22.5867 15.6484 22.7394 15.712C22.892 15.7756 23.0557 15.8083 23.2211 15.8083C23.3864 15.8083 23.5501 15.7756 23.7027 15.712C23.8554 15.6484 23.9939 15.5553 24.1103 15.4379L28.9574 10.5782C29.6611 9.8737 30.0563 8.91869 30.0563 7.92296C30.0563 6.92723 29.6611 5.97222 28.9574 5.26769Z"
+                        fill="#64748B" />
+                    </svg>
+                  </div>
+                  <div class="chaos-timeline_status after">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.14008 0 0 3.14008 0 7C0 10.8599 3.14008 14 7 14C10.8599 14 14 10.8599 14 7C14 3.14008 10.8599 0 7 0ZM10.6167 6.132L8.03483 8.66658C7.57808 9.11458 6.99008 9.338 6.4015 9.338C5.81933 9.338 5.23717 9.11867 4.78217 8.67942L3.67442 7.59033C3.44458 7.36458 3.44167 6.99533 3.66742 6.7655C3.89258 6.53508 4.263 6.53217 4.49225 6.7585L5.5965 7.84408C6.04917 8.28158 6.76375 8.27925 7.21875 7.83358L9.8 5.29958C10.0292 5.07325 10.3973 5.07733 10.6248 5.30717C10.8506 5.537 10.8471 5.90625 10.6167 6.132Z"
+                          fill="#16A34A" />
+                      </svg>
+                      После
+                    </div>
+                    <div class="text">Полная загрузка</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chaos-timeline_divider">4</div>
+              <div class="chaos-timeline_empty"></div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="chaos-timeline_item">
+              <div class="chaos-timeline_content">
+                <div class="chaos-timeline_title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <g clip-path="url(#clip0_259_628)">
+                      <path
+                        d="M3.75 3.87499e-07C5.8175 2.06752e-07 7.5 1.6825 7.5 3.75L7.5 26.25C7.5 28.3175 5.8175 30 3.75 30C1.6825 30 4.38294e-06 28.3175 4.2022e-06 26.25L2.23518e-06 3.75C2.05444e-06 1.6825 1.6825 5.68246e-07 3.75 3.87499e-07ZM26.25 6.25C28.3175 6.25 30 7.9325 30 10L30 26.25C30 28.3175 28.3175 30 26.25 30C24.1825 30 22.5 28.3175 22.5 26.25L22.5 10C22.5 7.9325 24.1825 6.25 26.25 6.25ZM15 13.75C17.0675 13.75 18.75 15.4325 18.75 17.5L18.75 26.25C18.75 28.3175 17.0675 30 15 30C12.9325 30 11.25 28.3175 11.25 26.25L11.25 17.5C11.25 15.4325 12.9325 13.75 15 13.75Z"
+                        fill="#2F6FED" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_259_628">
+                        <rect width="30" height="30" fill="white" transform="translate(30 30) rotate(180)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Аналитика
+                </div>
+                <div class="chaos-timeline_box">
+                  <div class="chaos-timeline_status now">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14C10.866 14 14 10.866 14 7C13.9958 3.13573 10.8643 0.00418359 7 0ZM9.33332 8.50907C9.57037 8.72725 9.58568 9.09628 9.3675 9.33332C9.14933 9.57037 8.7803 9.58568 8.54325 9.3675C8.53139 9.35659 8.52001 9.34519 8.50907 9.33332L7 7.82482L5.4915 9.33332C5.25976 9.55713 4.89048 9.55071 4.66668 9.31897C4.44836 9.09292 4.44836 8.73455 4.66668 8.5085L6.17518 7L4.66668 5.4915C4.44287 5.25976 4.44929 4.89048 4.68103 4.66668C4.90708 4.44836 5.26545 4.44836 5.4915 4.66668L7 6.17518L8.50907 4.66668C8.72725 4.42963 9.09628 4.41432 9.33332 4.6325C9.57037 4.85067 9.58568 5.2197 9.3675 5.45675C9.35659 5.46861 9.34519 5.47999 9.33332 5.49093L7.82482 7L9.33332 8.50907Z"
+                          fill="#DC2626" />
+                      </svg>
+                      Сейчас
+                    </div>
+                    <div class="text">Нет прозрачности</div>
+                  </div>
+                  <div class="chaos-timeline_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="16" viewBox="0 0 31 16" fill="none">
+                      <path
+                        d="M28.9574 5.26769L24.1103 0.370483C23.9939 0.253089 23.8554 0.159911 23.7027 0.0963244C23.5501 0.0327374 23.3864 0 23.2211 0C23.0557 0 22.892 0.0327374 22.7394 0.0963244C22.5867 0.159911 22.4482 0.253089 22.3318 0.370483C22.0985 0.605151 21.9676 0.922595 21.9676 1.25348C21.9676 1.58437 22.0985 1.90182 22.3318 2.13648L26.7906 6.6329H1.25248C0.920304 6.6329 0.60173 6.76486 0.366844 6.99975C0.131958 7.23463 0 7.55321 0 7.88539C0 8.21756 0.131958 8.53614 0.366844 8.77103C0.60173 9.00591 0.920304 9.13787 1.25248 9.13787H26.8658L22.3318 13.6593C22.2144 13.7758 22.1212 13.9143 22.0576 14.0669C21.994 14.2196 21.9613 14.3833 21.9613 14.5486C21.9613 14.7139 21.994 14.8776 22.0576 15.0303C22.1212 15.1829 22.2144 15.3214 22.3318 15.4379C22.4482 15.5553 22.5867 15.6484 22.7394 15.712C22.892 15.7756 23.0557 15.8083 23.2211 15.8083C23.3864 15.8083 23.5501 15.7756 23.7027 15.712C23.8554 15.6484 23.9939 15.5553 24.1103 15.4379L28.9574 10.5782C29.6611 9.8737 30.0563 8.91869 30.0563 7.92296C30.0563 6.92723 29.6611 5.97222 28.9574 5.26769Z"
+                        fill="#64748B" />
+                    </svg>
+                  </div>
+                  <div class="chaos-timeline_status after">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.14008 0 0 3.14008 0 7C0 10.8599 3.14008 14 7 14C10.8599 14 14 10.8599 14 7C14 3.14008 10.8599 0 7 0ZM10.6167 6.132L8.03483 8.66658C7.57808 9.11458 6.99008 9.338 6.4015 9.338C5.81933 9.338 5.23717 9.11867 4.78217 8.67942L3.67442 7.59033C3.44458 7.36458 3.44167 6.99533 3.66742 6.7655C3.89258 6.53508 4.263 6.53217 4.49225 6.7585L5.5965 7.84408C6.04917 8.28158 6.76375 8.27925 7.21875 7.83358L9.8 5.29958C10.0292 5.07325 10.3973 5.07733 10.6248 5.30717C10.8506 5.537 10.8471 5.90625 10.6167 6.132Z"
+                          fill="#16A34A" />
+                      </svg>
+                      После
+                    </div>
+                    <div class="text">Контроль всех метрик</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chaos-timeline_divider">5</div>
+              <div class="chaos-timeline_empty"></div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="chaos-timeline_item">
+              <div class="chaos-timeline_content">
+                <div class="chaos-timeline_title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path
+                      d="M9.375 16.25C8.26248 16.25 7.17494 15.9201 6.24992 15.302C5.32489 14.6839 4.60392 13.8054 4.17818 12.7776C3.75243 11.7498 3.64104 10.6188 3.85808 9.52762C4.07512 8.43648 4.61085 7.4342 5.39752 6.64753C6.18419 5.86086 7.18647 5.32513 8.27762 5.10808C9.36876 4.89104 10.4998 5.00244 11.5276 5.42818C12.5554 5.85392 13.4339 6.57489 14.052 7.49992C14.6701 8.42494 15 9.51248 15 10.625C14.9983 12.1163 14.4052 13.5461 13.3506 14.6006C12.2961 15.6552 10.8663 16.2483 9.375 16.25ZM17.5 30H1.25C0.918479 30 0.600537 29.8683 0.366116 29.6339C0.131696 29.3995 0 29.0815 0 28.75V28.125C0 25.6386 0.98772 23.254 2.74587 21.4959C4.50403 19.7377 6.88859 18.75 9.375 18.75C11.8614 18.75 14.246 19.7377 16.0041 21.4959C17.7623 23.254 18.75 25.6386 18.75 28.125V28.75C18.75 29.0815 18.6183 29.3995 18.3839 29.6339C18.1495 29.8683 17.8315 30 17.5 30ZM21.875 11.25C20.7625 11.25 19.6749 10.9201 18.7499 10.302C17.8249 9.68394 17.1039 8.80543 16.6782 7.7776C16.2524 6.74976 16.141 5.61876 16.3581 4.52762C16.5751 3.43648 17.1109 2.4342 17.8975 1.64753C18.6842 0.860856 19.6865 0.325127 20.7776 0.108085C21.8688 -0.108957 22.9998 0.00243723 24.0276 0.42818C25.0554 0.853923 25.9339 1.57489 26.552 2.49992C27.1701 3.42495 27.5 4.51248 27.5 5.625C27.4983 7.11634 26.9052 8.54612 25.8506 9.60065C24.7961 10.6552 23.3663 11.2483 21.875 11.25ZM20.0987 13.7763C18.9345 13.9324 17.8151 14.3274 16.8106 14.9363C15.8061 15.5452 14.9382 16.3551 14.2612 17.315C17.0624 18.5871 19.2633 20.8928 20.4037 23.75H28.75C29.0815 23.75 29.3995 23.6183 29.6339 23.3839C29.8683 23.1495 30 22.8315 30 22.5V22.4525C29.9987 21.2065 29.7316 19.9751 29.2166 18.8406C28.7015 17.706 27.9504 16.6944 27.0133 15.8732C26.0762 15.052 24.9746 14.4402 23.7823 14.0786C22.5899 13.717 21.3341 13.6139 20.0987 13.7763Z"
+                      fill="#2F6FED" />
+                  </svg> Повторные пациенты
+                </div>
+                <div class="chaos-timeline_box">
+                  <div class="chaos-timeline_status now">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14C10.866 14 14 10.866 14 7C13.9958 3.13573 10.8643 0.00418359 7 0ZM9.33332 8.50907C9.57037 8.72725 9.58568 9.09628 9.3675 9.33332C9.14933 9.57037 8.7803 9.58568 8.54325 9.3675C8.53139 9.35659 8.52001 9.34519 8.50907 9.33332L7 7.82482L5.4915 9.33332C5.25976 9.55713 4.89048 9.55071 4.66668 9.31897C4.44836 9.09292 4.44836 8.73455 4.66668 8.5085L6.17518 7L4.66668 5.4915C4.44287 5.25976 4.44929 4.89048 4.68103 4.66668C4.90708 4.44836 5.26545 4.44836 5.4915 4.66668L7 6.17518L8.50907 4.66668C8.72725 4.42963 9.09628 4.41432 9.33332 4.6325C9.57037 4.85067 9.58568 5.2197 9.3675 5.45675C9.35659 5.46861 9.34519 5.47999 9.33332 5.49093L7.82482 7L9.33332 8.50907Z"
+                          fill="#DC2626" />
+                      </svg>
+                      Сейчас
+                    </div>
+                    <div class="text">Нет системы возврата</div>
+                  </div>
+                  <div class="chaos-timeline_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="16" viewBox="0 0 31 16" fill="none">
+                      <path
+                        d="M28.9574 5.26769L24.1103 0.370483C23.9939 0.253089 23.8554 0.159911 23.7027 0.0963244C23.5501 0.0327374 23.3864 0 23.2211 0C23.0557 0 22.892 0.0327374 22.7394 0.0963244C22.5867 0.159911 22.4482 0.253089 22.3318 0.370483C22.0985 0.605151 21.9676 0.922595 21.9676 1.25348C21.9676 1.58437 22.0985 1.90182 22.3318 2.13648L26.7906 6.6329H1.25248C0.920304 6.6329 0.60173 6.76486 0.366844 6.99975C0.131958 7.23463 0 7.55321 0 7.88539C0 8.21756 0.131958 8.53614 0.366844 8.77103C0.60173 9.00591 0.920304 9.13787 1.25248 9.13787H26.8658L22.3318 13.6593C22.2144 13.7758 22.1212 13.9143 22.0576 14.0669C21.994 14.2196 21.9613 14.3833 21.9613 14.5486C21.9613 14.7139 21.994 14.8776 22.0576 15.0303C22.1212 15.1829 22.2144 15.3214 22.3318 15.4379C22.4482 15.5553 22.5867 15.6484 22.7394 15.712C22.892 15.7756 23.0557 15.8083 23.2211 15.8083C23.3864 15.8083 23.5501 15.7756 23.7027 15.712C23.8554 15.6484 23.9939 15.5553 24.1103 15.4379L28.9574 10.5782C29.6611 9.8737 30.0563 8.91869 30.0563 7.92296C30.0563 6.92723 29.6611 5.97222 28.9574 5.26769Z"
+                        fill="#64748B" />
+                    </svg>
+                  </div>
+                  <div class="chaos-timeline_status after">
+                    <div class="label">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M7 0C3.14008 0 0 3.14008 0 7C0 10.8599 3.14008 14 7 14C10.8599 14 14 10.8599 14 7C14 3.14008 10.8599 0 7 0ZM10.6167 6.132L8.03483 8.66658C7.57808 9.11458 6.99008 9.338 6.4015 9.338C5.81933 9.338 5.23717 9.11867 4.78217 8.67942L3.67442 7.59033C3.44458 7.36458 3.44167 6.99533 3.66742 6.7655C3.89258 6.53508 4.263 6.53217 4.49225 6.7585L5.5965 7.84408C6.04917 8.28158 6.76375 8.27925 7.21875 7.83358L9.8 5.29958C10.0292 5.07325 10.3973 5.07733 10.6248 5.30717C10.8506 5.537 10.8471 5.90625 10.6167 6.132Z"
+                          fill="#16A34A" />
+                      </svg>
+                      После
+                    </div>
+                    <div class="text">Контроль всех метрик</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chaos-timeline_divider">6</div>
+              <div class="chaos-timeline_empty"></div>
+            </div>
+          </div>
+          <div class="revenue-management">
+            <div class="management_title">Мы не “улучшаем маркетинг” <br> Мы управляем всей системой, которая
+              <span>генерирует
+                доход</span>
+            </div>
+            <div class="management-block">
+              <div class="position-bg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
+                  <circle cx="100" cy="100" r="99.5" stroke="#8A96AF" stroke-dasharray="2 6" />
+                </svg>
+              </div>
+              <div class="items">
+                <div class="item">
+                  Маркетинг <span>→</span><br> поток пациентов
+                </div>
+                <div class="item">
+                  Запись <span>→</span><br> конверсия в визит
+                </div>
+              </div>
+              <div class="item" style="margin: 0 auto;">
+                Повторные визиты <span>→</span><br> выручка клиники
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="pay-from-growth">
+      <div class="container">
+
+        <h2 class="main-title">Вы платите только <span>из роста выручки</span></h2>
+        <p class="main-description">Наш доход напрямую зависит <br> от роста вашей клиники</p>
+        <div class="lists-block">
+          <p class="list-description">Перед заключением договора определяем базовый уровень дохода, от которого будем
+            считать рост. Базовый уровень фиксируем в договоре. Обычно он определяется как:</p>
+          <ul>
+            <li>Средний доход за последние 3 месяца</li>
+            <li>Средний доход за тот же сезон</li>
+            <li>Доход месяц к месяцу (при высокой сезонности)</li>
+          </ul>
+        </div>
+
+        <div class="block d-flex align-items-center gap-3">
+          <div class="item">
+            <img src="assets/imgs/pay-from-growth_checked-icon.png" alt="pay-from-growth_checked-icon.png" class="icon">
+            <div class="content">
+              <p class="text">Вы сначала зарабатываете деньги и получаете их на свой счет</p>
+              <p class="text">И только потом платите нам часть дохода</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/imgs/pay-from-growth_checked-icon.png" alt="pay-from-growth_checked-icon.png" class="icon">
+            <div class="content">
+              <p class="text">Фиксированная оплата: 150 000 ₽ в месяц</p>
+              <p class="text">+ 10% от прироста выручки относительно базового уровня</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/imgs/pay-from-growth_checked-icon.png" alt="pay-from-growth_checked-icon.png" class="icon">
+            <div class="content">
+              <p class="text">Если выручка не растет — вы почти ничего не платите</p>
+              <p class="text">Мы зарабатываем только тогда, когда растет ваш доход</p>
+            </div>
+          </div>
+
+          <div class="mobile-icon">
+            <img src="assets/imgs/mobile-bottom-icon.svg" alt="mobile-bottom-icon.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <div class="main-block">
+          <div class="mobile-icons">
+            <img class="icon1" src="assets/imgs/how-it-works_mobile-icons__icon1.svg"
+              alt="how-it-works_mobile-icons__icon1.svg">
+    
+    
+            <img class="icon2" src="assets/imgs/how-it-works_mobile-icons__icon2.svg"
+              alt="how-it-works_mobile-icons__icon2.svg">
+    
+    
+            <img class="icon3" src="assets/imgs/how-it-works_mobile-icons__icon3.svg"
+              alt="how-it-works_mobile-icons__icon4.svg">
+    
+    
+            <img class="icon4" src="assets/imgs/how-it-works_mobile-icons__icon4.svg"
+              alt="how-it-works_mobile-icons__icon4.svg">
+    
+            <img class="icon5" src="assets/imgs/how-it-works_mobile-icons__icon5.svg"
+              alt="how-it-works_mobile-icons__icon5.svg">
+    
+            <img class="icon6" src="assets/imgs/how-it-works_mobile-icons__icon6.svg"
+              alt="how-it-works_mobile-icons__icon6.svg">
+    
+    
+          </div>
+          <h2 class="main-title">Как мы работаем?</h2>
+          <p class="main-description">Берем на себя операционное управление ключевыми процессами <br> и <span>отвечаем
+              за
+              результат</span>
+          </p>
+
+          <div class="items-block">
+            <div class="items">
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">1</p>
+                  <p class="text">Онлайн встреча и обсуждение текущего состояния клиники</p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M13.25 10.125L10.125 13.25L7 10.125M10.125 13.25L10.125 7M10.125 19.5C4.94733 19.5 0.749999 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.749999 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">2</p>
+                  <p class="text">Подписание <br> Договора о неразглашении</p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M13.25 10.125L10.125 13.25L7 10.125M10.125 13.25L10.125 7M10.125 19.5C4.94733 19.5 0.749999 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.749999 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">3</p>
+                  <p class="text">Определение базового уровня дохода, от которого считаем рост</p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M13.25 10.125L10.125 13.25L7 10.125M10.125 13.25L10.125 7M10.125 19.5C4.94733 19.5 0.749999 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.749999 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">4</p>
+                  <p class="text">Подписание договора о начале работы по увеличению дохода</p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M13.25 10.125L10.125 13.25L7 10.125M10.125 13.25L10.125 7M10.125 19.5C4.94733 19.5 0.749999 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.749999 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">5</p>
+                  <p class="text"><span>Погружение.</span> Анализ текущей экономики (маркетинг, запись, выручка и т.д.)
+                  </p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M13.25 10.125L10.125 13.25L7 10.125M10.125 13.25L10.125 7M10.125 19.5C4.94733 19.5 0.749999 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.749999 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">6</p>
+                  <p class="text"><span>Запуск системы.</span> Внедрение процессов (настройка маркетинга, записи и
+                    аналитики...)</p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M13.25 10.125L10.125 13.25L7 10.125M10.125 13.25L10.125 7M10.125 19.5C4.94733 19.5 0.749999 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.749999 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">7</p>
+                  <p class="text"><span>Опер. управление.</span> Еженедельная работа с метриками (контроль,
+                    корректировки, рост)</p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path
+                      d="M13.25 10.125L10.125 13.25L7 10.125M10.125 13.25L10.125 7M10.125 19.5C4.94733 19.5 0.749999 15.3027 0.75 10.125C0.75 4.94733 4.94733 0.749999 10.125 0.75C15.3027 0.75 19.5 4.94733 19.5 10.125C19.5 15.3027 15.3027 19.5 10.125 19.5Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_content">
+                  <p class="number">8</p>
+                  <p class="text"><span class="d-block">Рост дохода.</span> Увеличение выручки за счет управления
+                    системой</p>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                    <path
+                      d="M4.75 6.75V16.75M2.75 16.75H14.1104C15.0638 16.75 15.8846 16.0771 16.0716 15.1422L17.2716 9.14223C17.5191 7.90465 16.5725 6.75 15.3104 6.75H11.75L12.5559 1.9144C12.6575 1.30487 12.1875 0.75 11.5695 0.75H11.3556C10.3525 0.75 9.4158 1.2513 8.8594 2.0859L6.34373 5.8594C5.9728 6.4158 5.34834 6.75 4.67963 6.75H0.75V14.75C0.75 15.8546 1.64543 16.75 2.75 16.75Z"
+                      stroke="#008CFF" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="word-block">
+            <div class="word-block_title">
+              Мы работаем с клиниками:
+            </div>
+            <div class="word_items">
+              <div class="word_item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                  <path
+                    d="M10.6866 0.29286C11.0772 -0.0975983 11.7102 -0.097642 12.1007 0.29286C12.4911 0.683368 12.4911 1.31642 12.1007 1.70692L5.41397 8.39364C4.76974 9.03746 3.72525 9.0377 3.08116 8.39364L0.292881 5.60458C-0.0976352 5.21406 -0.0976187 4.58104 0.292881 4.19052C0.683405 3.79999 1.31642 3.79999 1.70694 4.19052L4.24757 6.73036L10.6866 0.29286Z"
+                    fill="#008CFF" />
+                </svg>
+                Частные медицинские центры и узкопрофильные клиники
+              </div>
+              <div class="word_item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                  <path
+                    d="M10.6866 0.29286C11.0772 -0.0975983 11.7102 -0.097642 12.1007 0.29286C12.4911 0.683368 12.4911 1.31642 12.1007 1.70692L5.41397 8.39364C4.76974 9.03746 3.72525 9.0377 3.08116 8.39364L0.292881 5.60458C-0.0976352 5.21406 -0.0976187 4.58104 0.292881 4.19052C0.683405 3.79999 1.31642 3.79999 1.70694 4.19052L4.24757 6.73036L10.6866 0.29286Z"
+                    fill="#008CFF" />
+                </svg>
+                Выручка от 3 млн рублей в месяц.
+              </div>
+              <div class="word_item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                  <path
+                    d="M10.6866 0.29286C11.0772 -0.0975983 11.7102 -0.097642 12.1007 0.29286C12.4911 0.683368 12.4911 1.31642 12.1007 1.70692L5.41397 8.39364C4.76974 9.03746 3.72525 9.0377 3.08116 8.39364L0.292881 5.60458C-0.0976352 5.21406 -0.0976187 4.58104 0.292881 4.19052C0.683405 3.79999 1.31642 3.79999 1.70694 4.19052L4.24757 6.73036L10.6866 0.29286Z"
+                    fill="#008CFF" />
+                </svg>
+                Собственник нацелен на масштабирование и хочет выйти из операционного управления маркетингом и
+                продажами.
+              </div>
+            </div>
+            <div class="warning-block">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect width="20" height="20" rx="10" fill="#008CFF" />
+                <path
+                  d="M10.0012 14.5225C9.16859 14.5225 8.49001 13.8678 8.49001 13.0634C8.49001 12.2581 9.16762 11.6025 10.0012 11.6025C10.8348 11.6025 11.5124 12.2581 11.5124 13.0634C11.5124 13.8678 10.8338 14.5225 10.0012 14.5225ZM11.5933 6.91431C11.5826 6.94351 10.2274 10.1809 10.2274 10.1809C10.1904 10.2694 10.1007 10.3278 10.0022 10.3278C9.90372 10.3278 9.81402 10.2694 9.77697 10.1809L8.42078 6.94257C8.33941 6.74629 8.29675 6.53704 8.29501 6.32561C8.29501 5.41665 9.06037 4.67725 10.0012 4.67725C10.2775 4.67793 10.5496 4.74337 10.794 4.86795C11.0384 4.99253 11.2478 5.17252 11.4044 5.3925C11.5609 5.61248 11.6599 5.86587 11.6928 6.13092C11.7257 6.39598 11.6916 6.6648 11.5933 6.91431Z"
+                  fill="white" />
+              </svg>
+              Берём только одно направление (неврология, урология, гинекология и т.д.) из одного города, чтобы не
+              создавать себе самоконкуренции
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="growth-potential">
+      <div class="container">
+        <div class="main-block">
+          <h2 class="main-title">Узнайте реальный потенциал роста <br> вашей клиники <span>за 30 минут</span></h2>
+          <p class="main-description">
+            Вы уже теряете деньги. <span class="d-block">Вопрос только в том, когда вы <br> это остановите</span>
+          </p>
+          <div class="warning-block d-flex gap-3">
+            <div class="block">
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <rect width="25" height="25" rx="5" fill="white" />
+                  <path
+                    d="M12.5015 18.1532C11.4607 18.1532 10.6125 17.3349 10.6125 16.3294C10.6125 15.3227 11.4595 14.5033 12.5015 14.5033C13.5435 14.5033 14.3905 15.3227 14.3905 16.3294C14.3905 17.3349 13.5423 18.1532 12.5015 18.1532ZM14.4917 8.64301C14.4783 8.67951 12.7843 12.7262 12.7843 12.7262C12.738 12.8369 12.6258 12.9099 12.5027 12.9099C12.3797 12.9099 12.2675 12.8369 12.2212 12.7262L10.526 8.67833C10.4243 8.43298 10.3709 8.17142 10.3688 7.90713C10.3688 6.77094 11.3255 5.84668 12.5015 5.84668C12.8469 5.84753 13.187 5.92933 13.4925 6.08506C13.798 6.24078 14.0598 6.46578 14.2555 6.74075C14.4512 7.01572 14.5749 7.33245 14.616 7.66378C14.6572 7.9951 14.6145 8.33112 14.4917 8.64301Z"
+                    fill="#008CFF" />
+                </svg>
+              </div>
+              <p class="text"><span>-20%</span> пациентов не доходят до записи  </p>
+            </div>
+            <div class="block">
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <rect width="25" height="25" rx="5" fill="white" />
+                  <path
+                    d="M12.5015 18.1532C11.4607 18.1532 10.6125 17.3349 10.6125 16.3294C10.6125 15.3227 11.4595 14.5033 12.5015 14.5033C13.5435 14.5033 14.3905 15.3227 14.3905 16.3294C14.3905 17.3349 13.5423 18.1532 12.5015 18.1532ZM14.4917 8.64301C14.4783 8.67951 12.7843 12.7262 12.7843 12.7262C12.738 12.8369 12.6258 12.9099 12.5027 12.9099C12.3797 12.9099 12.2675 12.8369 12.2212 12.7262L10.526 8.67833C10.4243 8.43298 10.3709 8.17142 10.3688 7.90713C10.3688 6.77094 11.3255 5.84668 12.5015 5.84668C12.8469 5.84753 13.187 5.92933 13.4925 6.08506C13.798 6.24078 14.0598 6.46578 14.2555 6.74075C14.4512 7.01572 14.5749 7.33245 14.616 7.66378C14.6572 7.9951 14.6145 8.33112 14.4917 8.64301Z"
+                    fill="#008CFF" />
+                </svg>
+              </div>
+              <p class="text"><span>-15%</span> выручки теряется в процессе  </p>
+            </div>
+          </div>
+          <button class="growth-potential_btn">
+            Записаться на бесплатный аудит <span>и получить стратегию</span>
+          </button>
+          <div class="btn_text"><span class="d-block">Без обязательств</span> покажем, где вы теряете деньги и как это
+            исправить</div>
+        </div>
+      </div>
+    </section>
+    <!-- free-reputation-audit end -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_blocks">
+          <div class="block">
+            <div class="contact_item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M15.4677 11.6426C15.3954 11.1563 15.0073 10.7771 14.5077 10.6641C12.5658 10.2237 12.079 9.14161 11.9969 7.9414C11.6525 7.87942 11.0399 7.81234 10 7.81234C8.96012 7.81234 8.34749 7.87942 8.00313 7.9414C7.92099 9.14161 7.4342 10.2237 5.49233 10.6641C4.99273 10.7779 4.60466 11.1563 4.53232 11.6426L4.15781 14.1524C4.02594 15.0362 4.69659 15.8332 5.62947 15.8332H14.3705C15.3027 15.8332 15.9741 15.0362 15.8422 14.1524L15.4677 11.6426ZM10 14.0044C8.94882 14.0044 8.09656 13.1878 8.09656 12.1815C8.09656 11.1753 8.94882 10.3586 10 10.3586C11.0512 10.3586 11.9034 11.1753 11.9034 12.1815C11.9034 13.1878 11.0504 14.0044 10 14.0044ZM17.4977 7.08317C17.4796 5.98942 14.6026 4.16723 10 4.1665C5.39663 4.16723 2.51962 5.98942 2.50228 7.08317C2.48495 8.17692 2.51811 9.60025 4.41251 9.36327C6.62867 9.08546 6.49228 8.33661 6.49228 7.26619C6.49228 6.51952 8.29474 6.33942 10 6.33942C11.7053 6.33942 13.507 6.51952 13.5077 7.26619C13.5077 8.33661 13.3713 9.08546 15.5875 9.36327C17.4811 9.60025 17.5151 8.17692 17.4977 7.08317Z"
+                  fill="#BBC1D7" />
+              </svg>
+              <a href="tel:+79124904314">Телефон: +7 912-490-43-14</a>
+            </div>
+            <div class="contact_item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M9.29557 11.474C9.47051 11.638 9.7041 11.7355 9.95117 11.7474C10.1985 11.7593 10.4421 11.6846 10.6341 11.5381L10.7103 11.474L16.6224 5.93018C16.6415 5.99889 16.6548 6.06912 16.6615 6.14075L16.6667 6.25V13.75C16.6668 14.0653 16.5398 14.369 16.3112 14.6002C16.0825 14.8314 15.7689 14.9732 15.4336 14.9969L15.3333 15H4.66667C4.33036 15.0001 4.0064 14.8811 3.75976 14.6667C3.51317 14.4524 3.36187 14.1584 3.33659 13.844L3.33333 13.75V6.25C3.33333 6.17507 3.34021 6.10226 3.35351 6.03149L3.3789 5.92651L9.29557 11.474Z"
+                  fill="#BBC1D7" />
+                <path
+                  d="M15.3333 5C15.4142 5 15.4934 5.00661 15.5703 5.01953L15.6836 5.04395L10.0033 10.3687L4.32161 5.04272C4.39533 5.024 4.47091 5.01113 4.54818 5.00488L4.66667 5H15.3333Z"
+                  fill="#BBC1D7" />
+              </svg>
+              <a href="mailto:inakoinfo@gmail.com">E-mail: inakoinfo@gmail.com</a>
+            </div>
+            <div class="contact_item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.52027 16.7867C9.52027 16.7867 4.79997 12.7116 4.79997 8.70191C4.79997 7.28822 5.34782 5.93243 6.32301 4.9328C7.2982 3.93317 8.62084 3.37158 9.99997 3.37158C11.3791 3.37158 12.7017 3.93317 13.6769 4.9328C14.6521 5.93243 15.2 7.28822 15.2 8.70191C15.2 12.7116 10.4797 16.7867 10.4797 16.7867C10.2171 17.0345 9.78482 17.0319 9.52027 16.7867ZM9.99997 11.0339C10.2987 11.0339 10.5946 10.9736 10.8706 10.8564C11.1466 10.7392 11.3974 10.5674 11.6086 10.3509C11.8199 10.1343 11.9875 9.87727 12.1018 9.59433C12.2161 9.3114 12.275 9.00815 12.275 8.70191C12.275 8.39567 12.2161 8.09242 12.1018 7.80949C11.9875 7.52655 11.8199 7.26947 11.6086 7.05292C11.3974 6.83638 11.1466 6.6646 10.8706 6.54741C10.5946 6.43021 10.2987 6.36989 9.99997 6.36989C9.3966 6.36989 8.81795 6.61559 8.3913 7.05292C7.96466 7.49026 7.72497 8.08342 7.72497 8.70191C7.72497 9.3204 7.96466 9.91356 8.3913 10.3509C8.81795 10.7882 9.3966 11.0339 9.99997 11.0339Z"
+                  fill="#BBC1D7" />
+              </svg>
+              <p>Адрес: 614000, г. Пермь, Комсомольский пр-т, 34Б, оф. 11</p>
+            </div>
+          </div>
+          <div class="block right-block">
+            <p>Использования файлов cookie</p>
+            <p>Пользовательское соглашение</p>
+            <p>Политика обработки персональных данных</p>
+          </div>
+        </div>
+        <p class="top-description">© 2026 Все права защищены. Агентство маркетинга "ИНАКО" </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Calculator Script -->
+  <script src="assets/js/calculator.js"></script>
+</body>
+
+</html>
